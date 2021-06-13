@@ -1,0 +1,939 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<!--=============== basic  ===============-->
+<meta charset="UTF-8">
+<title>Hjelpbil -Booking system template</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="robots" content="index, follow"/>
+<meta name="keywords" content=""/>
+<meta name="description" content=""/>
+<!--=============== css  ===============-->	
+<link type="text/css" rel="stylesheet" href="css/reset.css">
+<link type="text/css" rel="stylesheet" href="css/plugins.css">
+<link type="text/css" rel="stylesheet" href="css/style.css">
+<link type="text/css" rel="stylesheet" href="css/color.css">
+<!--=============== favicons ===============-->
+<link rel="shortcut icon" href="images/favicon.ico">
+</head>
+<body>
+<!-- loader -->
+<div class="loader-wrap">
+<div class="pin"></div>
+<div class="pulse"></div>
+</div>
+<!--  loader end -->
+<!-- Main   -->
+<div id="main">
+<!-- header  -->
+<header class="main-header dark-header fs-header sticky">
+    <div class="header-inner">
+        <div class="logo-holder">
+            <a href="index.html"><img src="images/logo.png" alt=""></a>
+        </div>
+        <a href="#" class="author-img btn btn-primary" data-action="toggle" data-side="right">
+            <img src="images/avatar/2.jpg" class="rounded" alt="authorimg" width="40">
+        </a>
+        <!-- <div class="header-user-menu">
+            <div class="header-user-name">
+                <span><img src="images/avatar/4.jpg" alt=""></span>
+                Hello , Alisa
+            </div>
+            <ul>
+                <li><a href="dashboard-myprofile.html"> Edit profile</a></li>
+                <li><a href="dashboard-add-listing.html"> Add Listing</a></li>
+                <li><a href="dashboard-bookings.html">  Bookings  </a></li>
+                <li><a href="dashboard-review.html"> Reviews </a></li>
+                <li><a href="#">Log Out</a></li>
+            </ul>
+        </div> -->
+
+       
+        <!-- nav-button-wrap-->
+        <div class="nav-button-wrap color-bg">
+            <div class="nav-button">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <!-- nav-button-wrap end-->
+        <!--  navigation -->
+        <div class="nav-holder main-menu">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="index.html">Find Car</i></a>
+                    </li>
+                    <li>
+                        <a href="register.html">Your Car</i></a>
+                    </li>
+                    <li>
+                        <a href="help.html">Helps</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <!-- navigation  end -->
+    </div>
+</header>
+
+        
+<!--  header end -->
+<!-- usersidebar -->
+
+<div class="sidebars">
+    <div class="sidebar right">
+        <!-- Sidebar Header -->
+        <div class="sidebarheader">
+            <div class="row">
+                <div class="col-md-6">
+                    <a href="addbewcar.html">
+                        + Add A Car
+                    </a>
+                </div>
+                <div class="col-md-6">
+                    <a href="userporfile.html">
+                        Your Profile
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar Body -->
+        <div class="sidebarbody">
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- notification item -->
+                    <h6>Nissan Leaf (El2136)</h6>
+                    <div class="inner_sidebar">
+                        <div class="sidebarauthoimg">
+                            <img src="images/avatar/4.jpg" alt="Img">
+                        </div>
+                        <div class="inner_headline">
+                            <p><strong>Pending Request Reply today before at 6:00pm</strong></p>
+                            <p>From: Thursday June 17:00 <br> To: Thursday June 19:00</p>
+                        </div>
+                        <span class="readmore"><i class="fa fa-angle-right"></i></span>
+                    </div>
+
+                    <!-- notification item -->
+                    <h6>Renault Megane (PP85150)</h6>
+                    <div class="inner_sidebar">
+                        <div class="sidebarauthoimg">
+                            <img src="images/avatar/4.jpg" alt="Img">
+                        </div>
+                        <div class="inner_headline">
+                            <p><strong>Key handhover</strong></p>
+                            <p>From: Today at 06:00pm</p>
+                        </div>
+                        <span class="readmore"><i class="fa fa-angle-right"></i></span>
+                    </div>
+
+                    <!-- notification item -->
+                    <h6>Volskwagen Caddy Maxi Tdi (Rj91120)</h6>
+                    <div class="inner_sidebar">
+                        <div class="sidebarauthoimg">
+                            <img src="images/avatar/4.jpg" alt="Img">
+                        </div>
+                        <div class="inner_headline">
+                            <p><strong>The rental agreement is now confirmed</strong></p>
+                            <p>From: Thursday June 17:00 <br> To: Thursday June 19:00</p>
+                        </div>
+                        <span class="readmore"><i class="fa fa-angle-right"></i></span>
+                    </div>
+
+                    <!-- notification item -->
+                    <h6>Nissan Leaf (El2136)</h6>
+                    <div class="inner_sidebar">
+                        <div class="sidebarauthoimg">
+                            <img src="images/avatar/4.jpg" alt="Img">
+                        </div>
+                        <div class="inner_headline">
+                            <p><strong>Pending Request Reply today before at 6:00pm</strong></p>
+                            <p>From: Thursday June 17:00 <br> To: Thursday June 19:00</p>
+                        </div>
+                        <span class="readmore"><i class="fa fa-angle-right"></i></span>
+                    </div>
+
+                    <!-- notification item -->
+                    <h6>Forge Mondeo(CF43567)</h6>
+                    <div class="inner_sidebar">
+                        <div class="sidebarauthoimg">
+                            <img src="images/avatar/4.jpg" alt="Img">
+                        </div>
+                        <div class="inner_headline">
+                            <p><strong>Key Return</strong></p>
+                            <p>06/10/2021</p>
+                        </div>
+                        <span class="readmore"><i class="fa fa-angle-right"></i></span>
+                    </div>
+                    <hr>
+                    <div class="inner_sidebar">
+                        <div class="sidebarauthoimg">
+                            <img src="images/avatar/4.jpg" alt="Img">
+                        </div>
+                        <div class="inner_headline">
+                            <p><strong>Paid</strong></p>
+                            <p>This rental agrement is now confirmed <br>From: Thursday June 17:00<br> To: Thursday June 19:00</p>
+                        </div>
+                        <span class="readmore"><i class="fa fa-angle-right"></i></span>
+                    </div>
+                    <hr>
+                    <div class="inner_sidebar">
+                        <div class="sidebarauthoimg">
+                            <img src="images/avatar/4.jpg" alt="Img">
+                        </div>
+                        <div class="inner_headline">
+                            <p><strong>Feedback Required</strong></p>
+                            <p>Give your feedback now.</p>
+                        </div>
+                        <span class="readmore"><i class="fa fa-angle-right"></i></span>
+                    </div>
+
+                    <!-- Sign Out -->
+                    <div class="sidelogout">
+                        <a href="javascript:void(0)">Logout</a>
+                    </div>
+
+                    <!-- Footer -->
+                    <div class="sidebarfooter">
+                        <h3>Get 200,– in rental credit</h3>
+                        <a href="invitere.html">
+                        <button class="btn color-bg flat-btn btn-sm">Recruit a friend</button></a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>	
+<!-- wrapper -->	
+<div id="wrapper">
+    <!--content -->  
+    <div class="content">
+        <!--section --> 
+        <section id="sec1">
+            <!-- container -->
+            <div class="container">
+                <!-- profile-edit-wrap -->
+                <div class="profile-edit-wrap">
+                    <div class="profile-edit-page-header">
+                        <h2>Your Profile</h2>
+                        <div class="breadcrumbs"><a href="#">Home</a><span>Dasboard</span></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <!-- profile-edit-container--> 
+                            <div class="profile-edit-container">
+                                <div class="progress" style="width:50%; text-align: left;">
+                                    <p> You're soon ready to rent. This remains:</p>
+                                        <div id="progressbar">
+                                            <div></div>
+                                        </div>
+                                </div>
+                                        <br>
+                                    <div class="notification danger fl-wrap">
+                                        <p>You must verify your driven lisence!</p>
+                                        <a class="notification-close" href="#"><i class="fa fa-times"></i></a>
+                                    </div>
+                                </div>                                
+                            
+                            <!-- profile-edit-container end-->  
+                            
+                            <div class="dashboard-list-box fl-wrap activities">
+                                <div class="dashboard-userheader fl-wrap">
+
+                                </div>
+                               
+                                <div class="tab">
+                                    <button class="tablinks" onclick="openCity(event, 'Generally')">Generally</button>
+                                    <button class="tablinks" onclick="openCity(event, 'Verification')">Verification / Trust</button>
+                                    <button class="tablinks" onclick="openCity(event, 'Reviews')">Reviews</button>
+                                    <button class="tablinks" onclick="openCity(event, 'Password')">Password & Account Settings</button>
+                                    <button class="tablinks" onclick="openCity(event, 'Payments')">Payments</button>
+                                    <button class="tablinks" onclick="openCity(event, 'Payout')">Payout</button>
+                                    <button class="tablinks" onclick="openCity(event, 'Alert')">Alert</button>
+                                </div>
+
+                                  <!-- Generally -->
+                                  <div id="Generally" class="tabcontent" style="display: block; ">
+                                    <div class="col-md-6 mx-auto generallydata mt-4 mb-4" style="float:none;margin:auto;padding-bottom: 20; ">
+                                        <form id="user-prfoiles" class="custom-form generallform">
+                                            <fieldset>
+                                                <div class="user-profile-avatar"><img src="images/avatar/4.jpg" alt="user photo" width="50">
+                                                </div>
+                                                <input type="file" value="" class="avateruploader">
+
+                                                <label><i class="fa fa-user-o"></i></label>
+                                                <input type="text" placeholder="First  Name *" value="" class="">
+                                                <div class="clearfix"></div>
+                                                <label><i class="fa fa-user-o"></i></label>
+                                                <input type="text" placeholder="Last  Name *" value="" class="">
+                                                <div class="clearfix"></div>
+                                                <label><i class="fa fa-envelope-o"></i>  </label>
+                                                <input type="text" placeholder="Email Address*" value="">
+                                                <div class="clearfix"></div>
+                                                <div class="addphone">
+                                                    <div class="addphonenumber">
+                                                        <ul>
+                                                            <li><i class="fa fa-check"></i></li>
+                                                            <li>979596931 Number is added</li>
+                                                            <li onclick="phoneverfication()"><i class="fa fa-pencil"></i></li>
+                                                        </ul>
+                                                    </div>
+                                                <div id="numberverified" style="display: none;">
+                                                 <div class="numberverifiedcontent">
+                                                           <p>We need your phone number in order to simplify the communication during the rental.
+                                                        </p>
+                                                        <label><i class="fa fa-phone"></i>  </label>
+                                                        <input type="text" placeholder="Phone Number*" value="">
+                                                        <button type="submit" class="sendnumbercode">Send</button>
+                                                        <p>Your will receive a text message with a 4 digit code</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                                <div class="lisenceverify">
+                                                    <p><strong style="font-size: 16px;">Driver's license</strong></p>
+                                                    <p>You must verify your drivers license before you can rent a car.</p>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                                <div class="bankid">
+                                                    <a href="javascript:void(0)">Verify with bank id</a>
+                                                    <p>A drivers license lookup will be performed when verifying BankID</p>
+                                                    <i class="fa fa-angle-right" id="knowmorearrow"></i>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                                <div class="verifypicture">
+                                                    <a href="javascript:void(0)">Verify with pictures</a>
+                                                    <p>Verification with pictures is a manual process and waiting time must be expected.</p>
+                                                    <i class="fa fa-angle-right" id="knowmorearrow"></i>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                                <label><i class="fa fa-map-marker"></i>  </label>
+                                                <input type="text" placeholder="Where do you live*" value="">
+                                                <div class="clearfix"></div>
+                                                <textarea cols="40" rows="3" placeholder="Describe your self:"></textarea>
+                                                <p>Hejlpbil is built on relations. Use this field to tell us a little about yourself.</p>
+                                            </fieldset>
+                                            <button class="btn  big-btn  color-bg flat-btn">Save<i class="fa fa-angle-right"></i></button>
+                                        </form>
+                                    </div>
+                                  </div>
+
+                                  <!-- Verification Tabs -->
+                                  <div id="Verification" class="tabcontent col-md-6 mx-auto" style="float:none;margin:auto;padding-bottom: 20; overflow: hidden;">
+                                    <div class="verification_content">
+                                        <div class="verificationitems">
+                                            <h6>Email</h6>
+                                            <p> <i class="fa fa-check"></i> Your e-mail is verified!</p>
+                                        </div>
+                                    <form id="user-prfoiles" class="custom-form verificationform">
+                                            <fieldset>
+                                        <div class="addphone mb-4">
+                                            <div class="addphonenumber">
+                                                <ul>
+                                                    <li><i class="fa fa-check"></i></li>
+                                                    <li>979596931 Number is added</li>
+                                                    <li onclick="phoneverficationtrust()"><i class="fa fa-pencil"></i></li>
+                                                </ul>
+                                            </div>
+                                            <div id="numberverifiedtrust" style="display: none;">
+                                            <div class="numberverifiedcontent">
+                                                <p>We need your phone number in order to simplify the communication during the rental.
+                                             </p>
+                                             <label><i class="fa fa-phone"></i>  </label>
+                                             <input type="text" placeholder="Phone Number*" value="">
+                                             <button onclick="phonenumberverify()" class="sendnumbercode">Send</button>
+                                             <p>Your will receive a text message with a 4 digit code</p>
+                                             </div>
+                                             <div class="cleafix"></div>
+                                           </div>
+
+                                           <div id="numberverificatoincode" style="display: none;">
+                                            <div class="numberverifiedcontent">
+                                             <label><i class="fa fa-envelope"></i>  </label>
+                                             <input type="text" placeholder="0236*" value="">
+                                             <button class="sendnumbercode">Submit</button>
+                                             <p>Please input 4 digit code</p>
+                                             </div>
+                                             <div class="cleafix"></div>
+                                           </div>
+                                        </div>
+                                        <div class="cleafix"></div>
+                                        <div class="bankid">
+                                            <a href="javascript:void(0)">Verify with bank id</a>
+                                            <p>A drivers license lookup will be performed when verifying BankID</p>
+                                            <i class="fa fa-angle-right" id="knowmorearrow"></i>
+                                        </div>
+                                        <div class="cleafix"></div>
+                                        <div class="bankid">
+                                            <a href="javascript:void(0)">Verify with bank id for mobile</a>
+                                            <p>A drivers license lookup will be performed when verifying BankID</p>
+                                            <i class="fa fa-angle-right" id="knowmorearrow"></i>
+                                        </div>
+                                        <div class="cleafix"></div>
+                                        <div class="verifypicture">
+                                            <a href="javascript:void(0)">Verify with pictures</a>
+                                            <p>Verification with pictures is a manual process and waiting time must be expected.</p>
+                                            <i class="fa fa-angle-right" id="knowmorearrow"></i>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                        <div class="verificationitems">
+                                            <h6>Facebook</h6>
+                                            <p> <i class="fa fa-check"></i> Your facebook account is verified!</p>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                        <div class="verificationitems">
+                                            <h6>Google</h6>
+                                            <p> <i class="fa fa-check"></i> Link your account with your Google account to increase trust. </p>
+                                        </div>
+                                    </fieldset>
+                                    </form>
+                                    </div> 
+                                  </div>
+                                  <!-- Reviews -->
+                                  <div id="Reviews" class="tabcontent col-md-6 mx-auto" style="float:none;margin:auto;padding-bottom: 20; overflow:hidden;">
+                                      <div class="reviewscontent">
+                                        <div class="reviews-comments-wrap">
+                                                                         
+                                            <!-- reviews-comments-item -->  
+                                            <div class="reviews-comments-item">
+                                                <div class="review-comments-avatar">
+                                                    <img src="images/avatar/3.jpg" alt=""> 
+                                                </div>
+                                                <div class="reviews-comments-item-text">
+                                                    <h4><a href="#">Adam Koncy</a> on <a href="listing-single.html" class="reviews-comments-item-link">Event in City Mol</a></h4>
+                                                    <div class="listing-rating card-popup-rainingvis" data-starrating2="4">
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+
+                                                    </div>
+                                                    <div class="clearfix"></div>
+                                                    <p>" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc posuere convallis purus non cursus. Cras metus neque, gravida sodales massa ut. "</p>
+                                                    <span class="reviews-comments-item-date"><i class="fa fa-calendar-check-o"></i>03 December 2017</span>
+                                                </div>
+                                            </div>
+                                            <!--reviews-comments-item end-->                                                                  
+                                        </div>
+                                      </div>
+                                    
+                                  </div>
+
+                                  <!-- Password -->
+                                  <div id="Password" class="tabcontent col-md-6 mx-auto" style="float: none;margin: auto;overflow: hidden;display: none;border: none;">
+                                    <div class="passwordchangingcontent">
+                                        <div class="profile-edit-container">
+                                            <div class="profile-edit-header fl-wrap" style="margin-top:30px">
+                                                <h4>Change Password</h4>
+                                            </div>
+                                            <div class="custom-form no-icons">
+                                                <div class="pass-input-wrap fl-wrap">
+                                                    <label>Current Password</label>
+                                                    <input type="password" class="pass-input" placeholder="" value="">
+                                                    <span class="eye"><i class="fa fa-eye" aria-hidden="true"></i> </span>
+                                                </div>
+                                                <div class="pass-input-wrap fl-wrap">
+                                                    <label>New Password</label>
+                                                    <input type="password" class="pass-input" placeholder="" value="">
+                                                    <span class="eye"><i class="fa fa-eye" aria-hidden="true"></i> </span>
+                                                </div>
+                                                <div class="pass-input-wrap fl-wrap">
+                                                    <label>Confirm New Password</label>
+                                                    <input type="password" class="pass-input" placeholder="" value="">
+                                                    <span class="eye"><i class="fa fa-eye" aria-hidden="true"></i> </span>
+                                                </div>
+                                                <button class="btn  big-btn  color-bg flat-btn">Save Changes<i class="fa fa-angle-right"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  </div>
+
+                                  <!-- Payments -->
+                                  <div id="Payments"  class="tabcontent col-md-6 mx-auto" style="float: none;margin: auto;overflow: hidden;display: none;border: none;">
+                                <div class="paymentcontent">
+                                    <h2>Registered cards</h2>
+                                    <button onclick="addnewcard()" class="btn  big-btn  color-bg flat-btn">Add New Card</button>
+                                </div>
+
+                                    <div id="addnewcard" class="paymentcard" style="display: none;">
+                                        <h2>Add New</h2>
+                                        <form id="user-prfoiles" class="custom-form generallform">
+                                            <fieldset>
+                                                <div class="row">
+
+                                                    <div class="col-md-6">
+                                                        <label for=""><i class="fa fa-user-o"></i></label>
+                                                        <input type="text" placeholder="Card holder name" value="" class="">
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <label><i class="fa fa-credit-card"></i></label>
+                                                      <input type="text" placeholder="xxxx-xxxx-xxxx-xxxx" value="">
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <label><i class="fa fa-calendar"></i></label>
+                                                        <input type="text" placeholder="MM" value="">                                                  
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <label><i class="fa fa-calendar"></i></label>
+                                                        <input type="text" placeholder="YY" value="">                                                  
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <label><i class="fa fa-credit-card"></i></label>
+                                                        <input type="password" placeholder="***" value=""> 
+                                                    </div>
+                                                    <button class="btn  big-btn  color-bg flat-btn">Save Card</button> <br>
+                                                </div>
+                                               
+                                                <div class="log-separator fl-wrap"><span>or</span></div>
+                                                <div class="soc-log fl-wrap">
+                                                    <p>Select Other Payment Method</p>
+                                                    <a href="#" class="paypal-log"><i class="fa fa-paypal"></i>Setup Paypal</a>
+                                                </div>
+                                                
+                                            </fieldset>
+                                        </form>
+                                    </div>
+
+                                    <hr>
+                                    <div class="reciept">
+                                        <h2>Receipts</h2>
+                                        <table class="table" style="width: 100%; text-align: left; margin: 10px 0px; font-size: 14px;
+                                    ">
+                                            <thead>
+                                              <tr>
+                                                <th scope="col">#</th>
+                                                <th scope="col">Owner</th>
+                                                <th scope="col">Period</th>
+                                                <th scope="col">Amount</th>
+                                              </tr>
+                                            </thead>
+                                            <tbody>
+                                              <tr>
+                                                <th scope="row">1</th>
+                                                <td>Espen</td>
+                                                <td>1st</td>
+                                                <td>120kr</td>
+                                              </tr>
+                                              
+                                            </tbody>
+                                          </table>
+                                    </div>
+
+                                    <div class="reciept">
+                                        <h2>Account credit</h2>
+                                        <table class="table" style="width: 100%; text-align: left; margin: 10px 0px; font-size: 14px;
+                                    ">
+                                            <thead>
+                                              <tr>
+                                                <th scope="col">#</th>
+                                                <th scope="col">Date</th>
+                                                <th scope="col">Description</th>
+                                                <th scope="col">Amount</th>
+                                              </tr>
+                                            </thead>
+                                            <tbody>
+                                              <tr>
+                                                <th scope="row">1</th>
+                                                <td>02.06.2021</td>
+                                                <td>Lorem lipsum...</td>
+                                                <td>120kr</td>
+                                              </tr>
+                                              
+                                            </tbody>
+                                            <tfoot>
+                                                <th colspan="3">Total</th>
+                                                <th>Kr</th>
+                                            </tfoot>
+                                          </table>
+                                    </div>
+                                   
+                                  </div>
+
+                                  <!-- Payout -->
+                                  <div id="Payout" class="tabcontent col-md-6 mx-auto" style="float: none;margin: auto;overflow: hidden;display: none;border: none;">
+                                    <div class="payoutcontent">
+                                        <h2>Account number</h2>
+                                        <p>When someone has rented from you, you will get paid the amount you have earned to the account number you enter here. We need your address in order to verify the ownership of the account. </p>
+                                        
+                                        <div class="form-group"><label>Payout terms</label><p>You have acceped the Stripe Connect terms</p></div>
+
+                                        <div class="form-group"><label>Payment recipient</label><p>Espen Holmstrand</p>
+                                            
+                                        </div>
+
+                                        <div class="form-group"><label>Address</label><p>Nyhavnvegen 3<br>
+                                            4250 Kopervik
+                                            <span><a class="payoutupdate" href="javascript:void(0)" onclick="UpdateAddress()">Update Address</a></span>
+                                        </p>
+
+                                        <div id="updateaddresspay" class="updateaddresspayout" style="display: none;">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <form action="" class="custom-form generallform">
+                                                        <fieldset>
+                                                            <div class="row">
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group">
+                                                                        <label><i class="fa fa-map-marker"></i></label>
+                                                                        <input type="text" placeholder="Nyhavnvegen 3" value="" class="">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group">
+                                                                        <label><i class="fa fa-map-marker"></i></label>
+                                                                        <input type="text" placeholder="City" value="" class="">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group">
+                                                                        <label><i class="fa fa-map-marker"></i></label>
+                                                                        <input type="text" placeholder="Postal Code" value="" class="">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group">
+                                                                        <label><i class="fa fa-map-marker"></i></label>
+                                                                        <input type="text" placeholder="State" value="" class="" readonly>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <button class="btn  big-btn  color-bg flat-btn">Update Address</button>
+                                                                </div>
+                                                               
+                                                                
+                                                            </div>
+                                                        </fieldset>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                                
+                                        </div>
+                                        
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>Bank account</label>
+                                            <p>****.**.12970
+                                                <span><a class="payoutupdate" href="javascript:void(0)" onclick="Updatebankaccount()">Update Account</a></span>
+                                            </p>
+
+                                        </div>
+                                        <div id="updatebankaccountcontent" class="updateaddbankaccountdetails" style="display: none;">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <form action="" class="custom-form generallform">
+                                                        <fieldset>
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+                                                                    <div class="form-group">
+                                                                        <label><i class="fa fa-briefcase"></i></label>
+                                                                        <input type="text" placeholder="1111 1111 1111 1111" value="" class="">
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col-md-12">
+                                                                    <button class="btn  big-btn  color-bg flat-btn">Update Bank Account</button>
+                                                                </div>
+                                                               
+                                                                
+                                                            </div>
+                                                        </fieldset>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                                
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="transition">
+                                        <h2>Transactions</h2>
+                                        <table class="table" style="width: 100%; text-align: left; margin: 10px 0px; font-size: 14px;
+                                        ">
+                                                <thead>
+                                                  <tr>
+                                                    <th scope="col">#</th>
+                                                    <th scope="col">Date</th>
+                                                    <th scope="col">Account Number</th>
+                                                    <th scope="col">Amount</th>
+                                                  </tr>
+                                                </thead>
+                                                <tbody>
+                                                  <tr>
+                                                    <td scope="row">1</td>
+                                                    <td>06-04-2021</td>
+                                                    <td>****.**.12970</td>
+                                                    <td>kr 112.50</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td scope="row">2</td>
+                                                    <td>06-04-2021</td>
+                                                    <td>****.**.12970</td>
+                                                    <td>kr 112.50</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td scope="row">3</td>
+                                                    <td>06-04-2021</td>
+                                                    <td>****.**.12970</td>
+                                                    <td>kr 112.50</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td scope="row">4</td>
+                                                    <td>06-04-2021</td>
+                                                    <td>****.**.12970</td>
+                                                    <td>kr 112.50</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td scope="row">5</td>
+                                                    <td>06-04-2021</td>
+                                                    <td>****.**.12970</td>
+                                                    <td>kr 112.50</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td scope="row">6</td>
+                                                    <td>06-04-2021</td>
+                                                    <td>****.**.12970</td>
+                                                    <td>kr 112.50</td>
+                                                  </tr>
+                                                  
+                                                </tbody>
+                                              </table>
+                                    </div>
+                                  </div>
+
+                                  <!-- Alert -->
+                                  <div id="Alert"  class="tabcontent col-md-6 mx-auto" style="float: none;margin: auto;overflow: hidden;display: none;border: none;">
+                                    <div class="alertcontent">
+                                        <p class="lead">These settings apply to notifications associated with the rentals.</p>
+                                        <p>I want notifications via</p>
+                                        <form action="">
+                                            <fieldset>
+                                                <div class="form-group">
+                                                    <input id="check-a" type="checkbox" name="check" checked>
+                                                    <label for="check-a">SMS</label>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input id="check-b" type="checkbox" name="check" checked disabled>
+                                                    <label for="check-b">Email</label>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input id="check-c" type="checkbox" name="check">
+                                                    <label for="check-c">Push Notification</label>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input id="check-d" type="checkbox" name="check">
+                                                    <label for="check-d">Desktop Notification</label>
+                                                </div>
+                                                
+                                            </fieldset>
+                                        </form>
+                                    </div>
+                                  </div>
+
+                            </div>                                        
+                        </div>                                       
+                        </div>
+                    </div>
+                </div>
+                <!--profile-edit-wrap end -->
+            </div>
+            <!--container end -->
+        </section>
+        <!-- section end -->
+        <div class="limit-box fl-wrap"></div>
+</div>
+<!-- wrapper end -->
+<!--footer -->
+<footer class="main-footer dark-footer  ">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="footer-widget fl-wrap">
+                    <h3>About Us</h3>
+                    <div class="footer-contacts-widget fl-wrap">
+                        <p>In ut odio libero, at vulputate urna. Nulla tristique mi a massa convallis cursus. Nulla eu mi magna. Etiam suscipit commodo gravida. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam. </p>
+                        <ul  class="footer-contacts fl-wrap">
+                            <li><span><i class="fa fa-envelope-o"></i> Mail :</span><a href="#" target="_blank">yourmail@domain.com</a></li>
+                            <li> <span><i class="fa fa-map-marker"></i> Adress :</span><a href="#" target="_blank">USA 27TH Brooklyn NY</a></li>
+                            <li><span><i class="fa fa-phone"></i> Phone :</span><a href="#">+7(111)123456789</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="footer-widget fl-wrap">
+                    <h3>Our Last News</h3>
+                    <div class="widget-posts fl-wrap">
+                        <ul>
+                            <li class="clearfix">
+                                <a href="#"  class="widget-posts-img"><img src="images/all/1.jpg" class="respimg" alt=""></a>
+                                <div class="widget-posts-descr">
+                                    <a href="#" title="">Vivamus dapibus rutrum</a>
+                                    <span class="widget-posts-date"> 21 Mar 09.05 </span>
+                                </div>
+                            </li>
+                            <li class="clearfix">
+                                <a href="#"  class="widget-posts-img"><img src="images/all/2.jpg" class="respimg" alt=""></a>
+                                <div class="widget-posts-descr">
+                                    <a href="#" title=""> In hac habitasse platea</a>
+                                    <span class="widget-posts-date"> 7 Mar 18.21 </span>
+                                </div>
+                            </li>
+                            <li class="clearfix">
+                                <a href="#"  class="widget-posts-img"><img src="images/all/3.jpg" class="respimg" alt=""></a>
+                                <div class="widget-posts-descr">
+                                    <a href="#" title="">Tortor tempor in porta</a>
+                                    <span class="widget-posts-date"> 7 Mar 16.42 </span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="footer-widget fl-wrap">
+                    <h3>Our  Twitter</h3>
+                    <div id="footer-twiit"></div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="footer-widget fl-wrap">
+                    <h3>Subscribe</h3>
+                    <div class="subscribe-widget fl-wrap">
+                        <p>Want to be notified when we launch a new template or an udpate. Just sign up and we'll send you a notification by email.</p>
+                        <div class="subcribe-form">
+                            <form id="subscribe">
+                                <input class="enteremail" name="email" id="subscribe-email" placeholder="Email" spellcheck="false" type="text">
+                                <button type="submit" id="subscribe-button" class="subscribe-button"><i class="fa fa-rss"></i> Subscribe</button>
+                                <label for="subscribe-email" class="subscribe-message"></label>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sub-footer fl-wrap">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="about-widget">
+                        <img src="images/logo.png" alt="">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="copyright"> &#169; Hjelpbil 2021 .  All rights reserved.</div>
+                </div>
+                <div class="col-md-4">
+                    <div class="footer-social">
+                        <ul>
+                            <li><a href="#" target="_blank" ><i class="fa fa-facebook-official"></i></a></li>
+                            <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#" target="_blank" ><i class="fa fa-chrome"></i></a></li>
+                            <li><a href="#" target="_blank" ><i class="fa fa-vk"></i></a></li>
+                            <li><a href="#" target="_blank" ><i class="fa fa-whatsapp"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--footer end  -->
+<a class="to-top"><i class="fa fa-angle-up"></i></a>
+</div>
+<!-- Main end -->
+<!--=============== scripts  ===============-->
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="js/plugins.js"></script>
+<script type="text/javascript" src="js/scripts.js"></script>
+<script src="js/jquery.sidebar.js"></script>
+
+<script src="http://jillix.github.io/jQuery-sidebar/js/handlers.js"></script>
+
+<style>
+    .sidebar.right {
+        width: 30%;
+    }
+</style>
+
+<script>
+          function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+              tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+              tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+          }
+
+          function phoneverfication() {
+                var x = document.getElementById("numberverified");
+                if (x.style.display === "none") {
+                    x.style.display = "block";
+                } else {
+                    x.style.display = "none";
+                }
+            }
+
+        function phoneverficationtrust() {
+            var x = document.getElementById("numberverifiedtrust");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+
+        function addnewcard() {
+            var x = document.getElementById("addnewcard");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+
+        function UpdateAddress() {
+            var x = document.getElementById("updateaddresspay");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+
+        function Updatebankaccount() {
+            var x = document.getElementById("updatebankaccountcontent");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+
+        
+
+        function phonenumberverify() {
+            var x = document.getElementById("numberverificatoincode");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+
+
+    </script> 
+
+   
+</body>
+</html>
