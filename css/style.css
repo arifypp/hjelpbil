@@ -7715,15 +7715,24 @@ input#refernceform {
   .timeline li {
 	padding: 2em 0;
   }
-  li:nth-child(n+2) .hexa {
-    background: #ddd;
+  
+
+li:nth-child(1) .hexa {
+    background: orange;
 }
+
+li:nth-child(2) .hexa {
+    background: orange;
+}
+
+
+
 
   .timeline .hexa{
 	width: 16px;
 	height: 16px;
 	position: absolute;
-	background: orange;
+	background: #ddd;
 	z-index: 5;
 	left: 0;
 	right: 0;
@@ -7804,6 +7813,11 @@ input#refernceform {
   }
   
  li:nth-child(1) .time {
+	background: orange;
+	display: inline-block;
+	padding: 8px;
+  }
+  li:nth-child(2) .time {
 	background: orange;
 	display: inline-block;
 	padding: 8px;
@@ -8107,6 +8121,24 @@ div#timelineright {
 .timelineprevinnerdata p strong {
     font-weight: 800;
     font-size: 13px;
+}
+
+.requesthistory ul li span {
+    display: block;
+    float: left;
+    margin-right: 15px;
+    background: #eee;
+    padding: 15px;
+    border-radius: 50%;
+}
+div#sentcstmsg button {
+    display: flex;
+    margin: 10px 0;
+    text-align: center;
+    margin: auto;
+    border: none;
+    background: orange;
+    color: #fff;
 }
 /* End notification */
 
