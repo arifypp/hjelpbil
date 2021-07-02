@@ -8031,6 +8031,7 @@ ul.acceptbtn li a {
 .requesthistory {
     text-align: left;
     display: block;
+	margin: 20px 0px;
 }
 
 .requesthistory ul {
@@ -8059,6 +8060,7 @@ ul.acceptbtn li a {
 .requesthistory ul li {
     display: block;
     border-bottom: 1px solid #eee;
+	margin: 10px 0px;
 }
 .timelinerequest {
     display: block;
@@ -8166,10 +8168,81 @@ input.customradioboxforpayment {
     padding: 10px;
     margin-bottom: 15px;
 }
+.car_select select {
+    width: 100%;
+    border: 1px solid #eee;
+    padding: 10px 5px;
+    margin-bottom: 20px;
+}
+.addnewcard label {
+    display: block;
+}
+
+.addnewcard {
+    text-align: left;
+}
+
 /* End Payment Request */
 
+/* Card Process */
 
+.couponcode {
+    display: block;
+    margin: 20px 0px;
+}
+.couponcode a{
+	color: orange;
+}
+.couponcode ul {
+    text-align: left;
+    padding: 10px 0px;
+}
 
+.couponcode ul li {
+    border-bottom: 1px solid #eee;
+    margin-bottom: 5px;
+}
+
+.couponcode ul li:last-child {
+    border: none;
+}
+.couponcode input[type=text] {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #eee;
+}
+.addnewcard input[type=text]{
+	padding: 10px;
+    width: 100%;
+    border: 1px solid #eee;
+}
+.addnewcard .form-group {
+    margin: 15px 0;
+}
+
+/* Card Process end */
+
+/* cancel page */
+.cancelwarning {
+    padding: 20px;
+    background: #ffcfb9;
+    color: #e46e37;
+    font-size: 16px;
+}
+/* end cancel page */
+
+/* payment done */
+a.pickupcar {
+    display: block;
+    padding: 10px;
+    background: orange;
+    width: 150px;
+    margin: auto;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+}
+/* paymemnt done end */
 
 @media only screen and (max-width: 600px) {
 	.progress {
