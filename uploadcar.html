@@ -1,0 +1,896 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<!--=============== basic  ===============-->
+<meta charset="UTF-8">
+<title>Hjelpbil -Booking system template</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="robots" content="index, follow"/>
+<meta name="keywords" content=""/>
+<meta name="description" content=""/>
+<!--=============== css  ===============--> 
+<link type="text/css" rel="stylesheet" href="css/reset.css">
+<link type="text/css" rel="stylesheet" href="css/plugins.css">
+<link type="text/css" rel="stylesheet" href="css/style.css">
+<link type="text/css" rel="stylesheet" href="css/color.css">
+<!--=============== favicons ===============-->
+<link rel="shortcut icon" href="images/favicon.ico">
+<style>
+    /*Copied from bootstrap to handle input file multiple*/
+.btn-upload {
+  display: block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+}
+output#Filelist {
+    display: block;
+}
+ul#imgList {
+    margin: 20px 0;
+}
+/*Also */
+.btn-upload {
+  border: 1px solid #c5dbec;
+  background: #d0e5f5;
+  font-weight: bold;
+  color: #2e6e9e;
+}
+/* This is copied from https://github.com/blueimp/jQuery-File-Upload/blob/master/css/jquery.fileupload.css */
+.fileinput-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.fileinput-button input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  opacity: 0;
+  -ms-filter: "alpha(opacity=0)";
+  font-size: 200px;
+  direction: ltr;
+  cursor: pointer;
+}
+
+.thumb {
+  height: 80px;
+  width: 100px;
+  border: 1px solid #000;
+}
+
+ul.thumb-Images li {
+  width: 120px;
+  float: left;
+  display: inline-block;
+  vertical-align: top;
+  height: 120px;
+}
+
+.img-wrap {
+  position: relative;
+  display: inline-block;
+  font-size: 0;
+}
+
+.img-wrap .close {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  z-index: 100;
+  background-color: #d0e5f5;
+  padding: 5px 2px 2px;
+  color: #000;
+  font-weight: bolder;
+  cursor: pointer;
+  opacity: 0.5;
+  font-size: 23px;
+  line-height: 10px;
+  border-radius: 50%;
+}
+
+.img-wrap:hover .close {
+  opacity: 1;
+  background-color: #ff0000;
+}
+
+.FileNameCaptionStyle {
+  font-size: 12px;
+}
+
+</style>
+</head>
+<body>
+<!-- loader -->
+<div class="loader-wrap">
+<div class="pin"></div>
+<div class="pulse"></div>
+</div>
+<!--  loader end -->
+<!-- Main   -->
+<div id="main">
+<!-- header  -->
+<header class="main-header dark-header fs-header sticky">
+    <div class="header-inner">
+        <div class="logo-holder">
+            <a href="index.html"><img src="images/logo.png" alt=""></a>
+        </div>
+        <a href="#" class="author-img btn btn-primary" data-action="toggle" data-side="right">
+            <img src="images/avatar/2.jpg" class="rounded" alt="authorimg" width="40">
+        </a>
+        <span class="carnotification">1</span>
+       
+        <!-- nav-button-wrap-->
+        <div class="nav-button-wrap color-bg">
+            <div class="nav-button">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <!-- nav-button-wrap end-->
+        <!--  navigation -->
+        <div class="nav-holder main-menu">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="index.html">Find Car</i></a>
+                    </li>
+                    <li>
+                        <a href="register.html">Your Car</i></a>
+                    </li>
+                    <li>
+                        <a href="help.html">Helps</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <!-- navigation  end -->
+    </div>
+</header>
+
+        
+<!--  header end -->
+<!-- usersidebar -->
+
+<div class="sidebars">
+    <div class="sidebar right">
+        <!-- Sidebar Header -->
+        <div class="sidebarheader">
+            <div class="row">
+                <div class="col-md-6">
+                    <a href="addbewcar.html">
+                        + Add A Car
+                    </a>
+                </div>
+                <div class="col-md-6">
+                    <a href="userporfile.html">
+                        Your Profile
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar Body -->
+        <div class="sidebarbody">
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- notification item -->
+                    <h6>Nissan Leaf (El2136)</h6>
+                    <div class="inner_sidebar">
+                        <div class="sidebarauthoimg">
+                            <img src="images/avatar/4.jpg" alt="Img">
+                        </div>
+                        <div class="inner_headline">
+                            <p><strong>Pending Request Reply today before at 6:00pm</strong></p>
+                            <p>From: Thursday June 17:00 <br> To: Thursday June 19:00</p>
+                        </div>
+                        <span class="readmore"><i class="fa fa-angle-right"></i></span>
+                    </div>
+
+                    <!-- notification item -->
+                    <h6>Renault Megane (PP85150)</h6>
+                    <div class="inner_sidebar">
+                        <div class="sidebarauthoimg">
+                            <img src="images/avatar/4.jpg" alt="Img">
+                        </div>
+                        <div class="inner_headline">
+                            <p><strong>Key handhover</strong></p>
+                            <p>From: Today at 06:00pm</p>
+                        </div>
+                        <span class="readmore"><i class="fa fa-angle-right"></i></span>
+                    </div>
+
+                    <!-- notification item -->
+                    <h6>Volskwagen Caddy Maxi Tdi (Rj91120)</h6>
+                    <div class="inner_sidebar">
+                        <div class="sidebarauthoimg">
+                            <img src="images/avatar/4.jpg" alt="Img">
+                        </div>
+                        <div class="inner_headline">
+                            <p><strong>The rental agreement is now confirmed</strong></p>
+                            <p>From: Thursday June 17:00 <br> To: Thursday June 19:00</p>
+                        </div>
+                        <span class="readmore"><i class="fa fa-angle-right"></i></span>
+                    </div>
+
+                    <!-- notification item -->
+                    <h6>Nissan Leaf (El2136)</h6>
+                    <div class="inner_sidebar">
+                        <div class="sidebarauthoimg">
+                            <img src="images/avatar/4.jpg" alt="Img">
+                        </div>
+                        <div class="inner_headline">
+                            <p><strong>Pending Request Reply today before at 6:00pm</strong></p>
+                            <p>From: Thursday June 17:00 <br> To: Thursday June 19:00</p>
+                        </div>
+                        <span class="readmore"><i class="fa fa-angle-right"></i></span>
+                    </div>
+
+                    <!-- notification item -->
+                    <h6>Forge Mondeo(CF43567)</h6>
+                    <div class="inner_sidebar">
+                        <div class="sidebarauthoimg">
+                            <img src="images/avatar/4.jpg" alt="Img">
+                        </div>
+                        <div class="inner_headline">
+                            <p><strong>Key Return</strong></p>
+                            <p>06/10/2021</p>
+                        </div>
+                        <span class="readmore"><i class="fa fa-angle-right"></i></span>
+                    </div>
+                    <hr>
+                    <div class="inner_sidebar">
+                        <div class="sidebarauthoimg">
+                            <img src="images/avatar/4.jpg" alt="Img">
+                        </div>
+                        <div class="inner_headline">
+                            <p><strong>Paid</strong></p>
+                            <p>This rental agrement is now confirmed <br>From: Thursday June 17:00<br> To: Thursday June 19:00</p>
+                        </div>
+                        <span class="readmore"><i class="fa fa-angle-right"></i></span>
+                    </div>
+                    <hr>
+                    <div class="inner_sidebar">
+                        <div class="sidebarauthoimg">
+                            <img src="images/avatar/4.jpg" alt="Img">
+                        </div>
+                        <div class="inner_headline">
+                            <p><strong>Feedback Required</strong></p>
+                            <p>Give your feedback now.</p>
+                        </div>
+                        <span class="readmore"><i class="fa fa-angle-right"></i></span>
+                    </div>
+
+                    <!-- Sign Out -->
+                    <div class="sidelogout">
+                        <a href="javascript:void(0)">Logout</a>
+                    </div>
+
+                    <!-- Footer -->
+                    <div class="sidebarfooter">
+                        <h3>Get 200,– in rental credit</h3>
+                        <a href="invitere.html">
+                        <button class="btn color-bg flat-btn btn-sm">Recruit a friend</button></a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>  
+<!-- wrapper -->    
+<div id="wrapper">
+    <!--content -->  
+    <div class="content">
+        <!--section --> 
+        <section id="sec1">
+            <!-- container -->
+            <div class="container">
+                <!-- profile-edit-wrap -->
+                <div class="profile-edit-wrap">
+                    <div class="row">
+                        
+                        <!-- Left side -->
+                        <div class="col-md-5">
+                            <div class="leftside_request">
+                                <div class="leftsideinner">
+                                    <ul>
+                                        <li>Home</li>
+                                        <li>Request</li>
+                                        <li>Nissan Leaf</li>
+                                    </ul>
+                                <h3 style="font-size:20px;">Conversion with hjelpbil</h3>
+                                <p>Rental #1301983</p>
+                               </div>
+                              <div class="requestbodycontent">
+                                  <h2 style="font-size: 22px;">Take at least 5 pictures of the car</h2>
+                                  <p>To avoid any disagreenments, please take five pictures of the car - one from each side, and one of the dashboard </p>
+                                  <img src="images/car-upload.svg" alt="" width="100%">
+
+                                  <!-- Upload multiple files -->
+                                  <span class="btn-upload fileinput-button">
+                                    <span>Select Attachment</span>
+                                    <input type="file" name="files[]" id="files" multiple accept="image/jpeg, image/png, image/gif,"><br />
+                                </span>
+                                <output id="Filelist"></output>
+
+                                  <!-- <a href="javascript:void(0)" class="pickupcar">Take Photos</a> -->
+
+
+                                  <a href="javascript:void(0)" class="btn btn-warning btn small" onclick="messFunction()" style="margin-right: 10px;">Send message</a>
+                                  <div class="sentcstmsg" style="display: none;" id="sentcstmsg">
+                                    <form action="">
+                                        <textarea name="" class="form-control" cols="30" rows="3"></textarea>
+                                        <button class="btn btn-warning btn small" type="submit">Add Message</button>
+                                    </form>
+                                </div>
+                                  
+                                  <div class="requesthistory">
+                                      <ul>
+                                       
+                                          <li>
+                                              <span><i class="fa fa-check"></i></span>
+                                                <div class="reqyestinnerhistory">
+                                                    <button class="btn btn-success" style="background-color: green;">Accepted</button>
+                                                    <p>Espen has accepted request</p>
+                                                </div>
+                                          </li>
+                                          <li>
+                                            <img src="images/avatar/2.jpg" alt="" width="40">
+                                              <div class="reqyestinnerhistory">
+                                                  <button>Pending</button>
+                                                  <p>Messages from clients</p>
+                                              </div>
+                                        </li>
+                                      </ul>
+                                  </div>
+                              </div> 
+                               
+                                
+                               
+
+                            </div>
+                        </div>
+                         <!-- Right Side -->
+                         <div class="col-md-7" id="timelineright">
+                             <!-- User Request -->
+                             <div class="timlineprevioudata">
+                                 <ul>
+                                     <li>
+                                         <div class="timelineprevinnerdata">
+                                             <div class="timelineprevimg">
+                                                <img src="images/avatar/5.jpg" alt="" width="50px">
+                                             </div>
+                                             <div class="timelineprevdata">
+                                                <h6><strong>Hjelpbil</strong></h6>
+                                                <p>Nissan Leaf - 2012</p>
+                                             </div>
+                                             
+                                         
+                                         <div class="timelinestar">
+                                            <span><i class="fa fa-star"></i></span>
+                                            <span><i class="fa fa-star"></i></span>
+                                            <span><i class="fa fa-star"></i></span>
+                                            <span><i class="fa fa-star"></i></span>
+                                            <span><i class="fa fa-star"></i></span>
+                                         </div>
+                                        </div>
+                                     </li>
+                                     <li>
+                                         <div class="timelineprevinnerdata">
+                                             <p><strong>Pickup at :</strong> Thu jun 3, 2021 6:00pm</p>
+                                         </div>
+                                     </li>
+                                     <li>
+                                        <div class="timelineprevinnerdata">
+                                            <p><strong>Delivery at :</strong> Thu jun 3, 2021 9:00pm</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="timelineprevinnerdata">
+                                            <p><strong>Delivery Location :</strong> Hovadgata 43, 4250 Kopervik, 4250 Kopervik</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="timelineprevinnerdata">
+                                            <p><strong>Mileage included :</strong>80km<br> Render will have to pay 2kr/km for execessive mileage</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="timelineprevinnerdata">
+                                            <p><strong>Payout Amount :</strong>Kr 22,50<br> Doesnt included execessive charge toll or fuel</p>
+                                        </div>
+                                    </li>
+                                 </ul>
+                             </div>
+                             <div class="timelinerequest">
+                                 <ul>
+                                     <li><img src="images/avatar/3.jpg" alt=""></li>
+                                     <li>Rental Process</li>
+                                     <li><img src="images/avatar/3.jpg" alt=""></li>
+                                 </ul>
+                             </div>
+                           <!-- Progres design -->
+                           <div class="mainprogress">
+                            <ul class="timeline">
+                                <!-- Item 1 -->
+                                <li>
+                                  <div class="direction-r">
+                                    <div class="flag-wrapper">
+                                      <span class="hexa"></span>
+                                      <span class="flag">Request Sent</span>
+                                      <span class="time-wrapper"><span class="time">June 2021</span></span>
+                                    </div>
+                                  </div>
+                                </li>
+                              
+                                <!-- Item 2 -->
+                                <li>
+                                  <div class="direction-l">
+                                    <div class="flag-wrapper">
+                                      <span class="hexa"></span>
+                                      <span class="flag">Accept</span>
+                                      <span class="time-wrapper"><span class="time">June 2021</span></span>
+                                    </div>
+                                  </div>
+                                </li>
+                                
+                                
+                              
+                                <!-- Item 3 -->
+                                <li>
+                                  <div class="direction-r">
+                                    <div class="flag-wrapper">
+                                      <span class="hexa"></span>
+                                      <span class="flag">Payment.</span>
+                                      <span class="time-wrapper"><span class="time">July 2021</span></span>
+                                    </div>
+                                  </div>
+                                </li>
+                                
+                                <!-- Item 4 -->
+                                <li>
+                                  <div class="direction-l">
+                                    <div class="flag-wrapper">
+                                      <span class="hexa"></span>
+                                      <span class="flag">Key Pickup</span>
+                                      <span class="time-wrapper"><span class="time">June 2021</span></span>
+                                    </div>
+                                  </div>
+                                </li>
+
+                                 <!-- Item 5 -->
+                                 <li>
+                                    <div class="direction-r">
+                                      <div class="flag-wrapper">
+                                        <span class="hexa"></span>
+                                        <span class="flag">Key Handhover.</span>
+                                        <span class="time-wrapper"><span class="time">July 2021</span></span>
+                                      </div>
+                                    </div>
+                                  </li>
+
+                                <!-- Item 6 -->
+                                <li>
+                                    <div class="direction-l">
+                                      <div class="flag-wrapper">
+                                        <span class="hexa"></span>
+                                        <span class="flag">Fill Out Pickup Form</span>
+                                        <span class="time-wrapper"><span class="time">June 2021</span></span>
+                                      </div>
+                                    </div>
+                                  </li>
+
+                                   <!-- Item 7 -->
+                                   <li>
+                                      <div class="direction-r">
+                                        <div class="flag-wrapper">
+                                          <span class="hexa"></span>
+                                          <span class="flag">Key Handhover</span>
+                                          <span class="time-wrapper"><span class="time">July 2021</span></span>
+                                        </div>
+                                      </div>
+                                    </li>
+
+                                <!-- Item 8 -->
+                                <li>
+                                    <div class="direction-l">
+                                      <div class="flag-wrapper">
+                                        <span class="hexa"></span>
+                                        <span class="flag">Receive Key</span>
+                                        <span class="time-wrapper"><span class="time">June 2021</span></span>
+                                      </div>
+                                    </div>
+                                  </li>
+
+                                   <!-- Item 9 -->
+                                   <li>
+                                      <div class="direction-r">
+                                        <div class="flag-wrapper">
+                                          <span class="hexa"></span>
+                                          <span class="flag">Payout</span>
+                                          <span class="time-wrapper"><span class="time">July 2021</span></span>
+                                        </div>
+                                      </div>
+                                    </li>
+
+                              </ul>
+                        </div>
+                         </div>
+                        </div>
+                    </div>
+                </div>
+                <!--profile-edit-wrap end -->
+            </div>
+            <!--container end -->
+        </section>
+        <!-- section end -->
+        <div class="limit-box fl-wrap"></div>
+</div>
+<!-- wrapper end -->
+<!--footer -->
+<footer class="main-footer dark-footer  ">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="footer-widget fl-wrap">
+                    <h3>About Us</h3>
+                    <div class="footer-contacts-widget fl-wrap">
+                        <p>In ut odio libero, at vulputate urna. Nulla tristique mi a massa convallis cursus. Nulla eu mi magna. Etiam suscipit commodo gravida. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam. </p>
+                        <ul  class="footer-contacts fl-wrap">
+                            <li><span><i class="fa fa-envelope-o"></i> Mail :</span><a href="#" target="_blank">yourmail@domain.com</a></li>
+                            <li> <span><i class="fa fa-map-marker"></i> Adress :</span><a href="#" target="_blank">USA 27TH Brooklyn NY</a></li>
+                            <li><span><i class="fa fa-phone"></i> Phone :</span><a href="#">+7(111)123456789</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="footer-widget fl-wrap">
+                    <h3>Our Last News</h3>
+                    <div class="widget-posts fl-wrap">
+                        <ul>
+                            <li class="clearfix">
+                                <a href="#"  class="widget-posts-img"><img src="images/all/1.jpg" class="respimg" alt=""></a>
+                                <div class="widget-posts-descr">
+                                    <a href="#" title="">Vivamus dapibus rutrum</a>
+                                    <span class="widget-posts-date"> 21 Mar 09.05 </span>
+                                </div>
+                            </li>
+                            <li class="clearfix">
+                                <a href="#"  class="widget-posts-img"><img src="images/all/2.jpg" class="respimg" alt=""></a>
+                                <div class="widget-posts-descr">
+                                    <a href="#" title=""> In hac habitasse platea</a>
+                                    <span class="widget-posts-date"> 7 Mar 18.21 </span>
+                                </div>
+                            </li>
+                            <li class="clearfix">
+                                <a href="#"  class="widget-posts-img"><img src="images/all/3.jpg" class="respimg" alt=""></a>
+                                <div class="widget-posts-descr">
+                                    <a href="#" title="">Tortor tempor in porta</a>
+                                    <span class="widget-posts-date"> 7 Mar 16.42 </span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="footer-widget fl-wrap">
+                    <h3>Our  Twitter</h3>
+                    <div id="footer-twiit"></div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="footer-widget fl-wrap">
+                    <h3>Subscribe</h3>
+                    <div class="subscribe-widget fl-wrap">
+                        <p>Want to be notified when we launch a new template or an udpate. Just sign up and we'll send you a notification by email.</p>
+                        <div class="subcribe-form">
+                            <form id="subscribe">
+                                <input class="enteremail" name="email" id="subscribe-email" placeholder="Email" spellcheck="false" type="text">
+                                <button type="submit" id="subscribe-button" class="subscribe-button"><i class="fa fa-rss"></i> Subscribe</button>
+                                <label for="subscribe-email" class="subscribe-message"></label>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sub-footer fl-wrap">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="about-widget">
+                        <img src="images/logo.png" alt="">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="copyright"> &#169; Hjelpbil 2021 .  All rights reserved.</div>
+                </div>
+                <div class="col-md-4">
+                    <div class="footer-social">
+                        <ul>
+                            <li><a href="#" target="_blank" ><i class="fa fa-facebook-official"></i></a></li>
+                            <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#" target="_blank" ><i class="fa fa-chrome"></i></a></li>
+                            <li><a href="#" target="_blank" ><i class="fa fa-vk"></i></a></li>
+                            <li><a href="#" target="_blank" ><i class="fa fa-whatsapp"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--footer end  -->
+<a class="to-top"><i class="fa fa-angle-up"></i></a>
+</div>
+<!-- Main end -->
+<!--=============== scripts  ===============-->
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="js/plugins.js"></script>
+<script type="text/javascript" src="js/scripts.js"></script>
+<script src="js/jquery.sidebar.js"></script>
+<script src="http://jillix.github.io/jQuery-sidebar/js/handlers.js"></script>
+
+<style>
+    .sidebar.right {
+        width: 30%;
+    }
+</style>
+<script>
+    function messFunction() {
+        var x = document.getElementById("sentcstmsg");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+
+    // Multiple images uploading
+    //I added event handler for the file upload control to access the files properties.
+document.addEventListener("DOMContentLoaded", init, false);
+
+//To save an array of attachments
+var AttachmentArray = [];
+
+//counter for attachment array
+var arrCounter = 0;
+
+//to make sure the error message for number of files will be shown only one time.
+var filesCounterAlertStatus = false;
+
+//un ordered list to keep attachments thumbnails
+var ul = document.createElement("ul");
+ul.className = "thumb-Images";
+ul.id = "imgList";
+
+function init() {
+  //add javascript handlers for the file upload event
+  document
+    .querySelector("#files")
+    .addEventListener("change", handleFileSelect, false);
+}
+
+//the handler for file upload event
+function handleFileSelect(e) {
+  //to make sure the user select file/files
+  if (!e.target.files) return;
+
+  //To obtaine a File reference
+  var files = e.target.files;
+
+  // Loop through the FileList and then to render image files as thumbnails.
+  for (var i = 0, f; (f = files[i]); i++) {
+    //instantiate a FileReader object to read its contents into memory
+    var fileReader = new FileReader();
+
+    // Closure to capture the file information and apply validation.
+    fileReader.onload = (function(readerEvt) {
+      return function(e) {
+        //Apply the validation rules for attachments upload
+        ApplyFileValidationRules(readerEvt);
+
+        //Render attachments thumbnails.
+        RenderThumbnail(e, readerEvt);
+
+        //Fill the array of attachment
+        FillAttachmentArray(e, readerEvt);
+      };
+    })(f);
+
+    // Read in the image file as a data URL.
+    // readAsDataURL: The result property will contain the file/blob's data encoded as a data URL.
+    // More info about Data URI scheme https://en.wikipedia.org/wiki/Data_URI_scheme
+    fileReader.readAsDataURL(f);
+  }
+  document
+    .getElementById("files")
+    .addEventListener("change", handleFileSelect, false);
+}
+
+//To remove attachment once user click on x button
+jQuery(function($) {
+  $("div").on("click", ".img-wrap .close", function() {
+    var id = $(this)
+      .closest(".img-wrap")
+      .find("img")
+      .data("id");
+
+    //to remove the deleted item from array
+    var elementPos = AttachmentArray.map(function(x) {
+      return x.FileName;
+    }).indexOf(id);
+    if (elementPos !== -1) {
+      AttachmentArray.splice(elementPos, 1);
+    }
+
+    //to remove image tag
+    $(this)
+      .parent()
+      .find("img")
+      .not()
+      .remove();
+
+    //to remove div tag that contain the image
+    $(this)
+      .parent()
+      .find("div")
+      .not()
+      .remove();
+
+    //to remove div tag that contain caption name
+    $(this)
+      .parent()
+      .parent()
+      .find("div")
+      .not()
+      .remove();
+
+    //to remove li tag
+    var lis = document.querySelectorAll("#imgList li");
+    for (var i = 0; (li = lis[i]); i++) {
+      if (li.innerHTML == "") {
+        li.parentNode.removeChild(li);
+      }
+    }
+  });
+});
+
+//Apply the validation rules for attachments upload
+function ApplyFileValidationRules(readerEvt) {
+  //To check file type according to upload conditions
+  if (CheckFileType(readerEvt.type) == false) {
+    alert(
+      "The file (" +
+        readerEvt.name +
+        ") does not match the upload conditions, You can only upload jpg/png/gif files"
+    );
+    e.preventDefault();
+    return;
+  }
+
+  //To check file Size according to upload conditions
+  if (CheckFileSize(readerEvt.size) == false) {
+    alert(
+      "The file (" +
+        readerEvt.name +
+        ") does not match the upload conditions, The maximum file size for uploads should not exceed 300 KB"
+    );
+    e.preventDefault();
+    return;
+  }
+
+  //To check files count according to upload conditions
+  if (CheckFilesCount(AttachmentArray) == false) {
+    if (!filesCounterAlertStatus) {
+      filesCounterAlertStatus = true;
+      alert(
+        "You have added more than 10 files. According to upload conditions you can upload 10 files maximum"
+      );
+    }
+    e.preventDefault();
+    return;
+  }
+}
+
+//To check file type according to upload conditions
+function CheckFileType(fileType) {
+  if (fileType == "image/jpeg") {
+    return true;
+  } else if (fileType == "image/png") {
+    return true;
+  } else if (fileType == "image/gif") {
+    return true;
+  } else {
+    return false;
+  }
+  return true;
+}
+
+//To check file Size according to upload conditions
+function CheckFileSize(fileSize) {
+  if (fileSize < 300000) {
+    return true;
+  } else {
+    return false;
+  }
+  return true;
+}
+
+//To check files count according to upload conditions
+function CheckFilesCount(AttachmentArray) {
+  //Since AttachmentArray.length return the next available index in the array,
+  //I have used the loop to get the real length
+  var len = 0;
+  for (var i = 0; i < AttachmentArray.length; i++) {
+    if (AttachmentArray[i] !== undefined) {
+      len++;
+    }
+  }
+  //To check the length does not exceed 10 files maximum
+  if (len > 9) {
+    return false;
+  } else {
+    return true;
+  }
+}
+
+//Render attachments thumbnails.
+function RenderThumbnail(e, readerEvt) {
+  var li = document.createElement("li");
+  ul.appendChild(li);
+  li.innerHTML = [
+    '<div class="img-wrap"> <span class="close">&times;</span>' +
+      '<img class="thumb" src="',
+    e.target.result,
+    '" title="',
+    escape(readerEvt.name),
+    '" data-id="',
+    readerEvt.name,
+    '"/>' + "</div>"
+  ].join("");
+
+  var div = document.createElement("div");
+  div.className = "FileNameCaptionStyle";
+  li.appendChild(div);
+  div.innerHTML = [readerEvt.name].join("");
+  document.getElementById("Filelist").insertBefore(ul, null);
+}
+
+//Fill the array of attachment
+function FillAttachmentArray(e, readerEvt) {
+  AttachmentArray[arrCounter] = {
+    AttachmentType: 1,
+    ObjectType: 1,
+    FileName: readerEvt.name,
+    FileDescription: "Attachment",
+    NoteText: "",
+    MimeType: readerEvt.type,
+    Content: e.target.result.split("base64,")[1],
+    FileSizeInBytes: readerEvt.size
+  };
+  arrCounter = arrCounter + 1;
+}
+
+
+
+</script>
+</body>
+</html>
