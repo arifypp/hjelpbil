@@ -8241,6 +8241,21 @@ a.pickupcar {
     color: #fff;
     font-size: 16px;
 }
+ul.carlistphoto li {
+    width: 80px !important;
+    display: block;
+    float: left;
+}
+
+ul.carlistphoto li img {
+    width: 100%;
+    border-radius: 0px;
+}
+
+ul.carlistphoto {
+    display: block;
+    overflow: hidden;
+}
 /* paymemnt done end */
 
 @media only screen and (max-width: 600px) {
