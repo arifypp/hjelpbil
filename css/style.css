@@ -8350,6 +8350,80 @@ section.successfinalmsg p {
 /* final success msg end */
 
 
+/* Discount */
+.search-box-container {
+    margin: 20px 0px;
+}
+.search-box-container input {
+	padding: 6px 20px 5px 5px;
+	text-align: right;
+	margin-right: 5px;
+  }
+  
+  .search-box-container:after {
+    content: "Kr";
+    margin-left: -25px;
+    margin-right: 25px;
+    padding: 6px;
+    background-color: #eee;
+    border: 1px solid;
+}
+a.discount {
+    font-size: 16px;
+    color: #FFA500;
+    text-decoration: underline;
+	line-height: 40px;
+}
+
+.viewmore {
+    text-align: right;
+    margin-right: 10px;
+    padding: 5px 0;
+    text-decoration: underline;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+.filter-checkbox{
+	margin-left: 30px
+  }
+  .filter-checkbox:first-child{
+	margin-left:0
+  }
+  li.paginate_button.page-item {
+    margin: 0px 2px;
+}
+
+li#example_previous a {
+    width: 70px;
+}
+div.dataTables_wrapper div.dataTables_paginate ul.pagination {
+    margin: 2px 0;
+	display: flex;
+    white-space: nowrap;
+    justify-content: flex-end;
+}
+.allcarownerdatalog {
+    text-align: left;
+}
+table#example {
+    width: 100% !important;
+}
+.btn-group.submitter-group.float-right {
+    text-align: right;
+    margin-bottom: 20px;
+}
+.exportdata button {
+    background: orange;
+    border-color: orange;
+    padding: 10px 15px;
+    margin: 10px 0px;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 5px;
+    border: none;
+}
 @media only screen and (max-width: 600px) {
 	.progress {
 		width: 100% !important;
